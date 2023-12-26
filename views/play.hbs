@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" class="X O">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triki - Interactivo</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="shortcut icon" href="/img/vs-Favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <p class="turnoJug stiloJug"></p>
+        </header>
+        <div class="tableroPadre">
+            <div class="jugador">
+                <p class="jugadorA stiloJug"></p>
+                <p class="stiloJugH">Ficha (X)</p>
+                <p class="stiloJugH">Partidas Ganadas: <span class="ganA">0</span></p>
+            </div>
+            <div id="tablero"></div>
+            <div class="jugador">
+                <p class="jugadorB stiloJug"></p>
+                <p class="stiloJugH">Ficha (O)</p>
+                <p class="stiloJugH">Partidas Ganadas: <span class="ganB">0</span></p>
+            </div>
+        </div>
+        <div class="boton desactivaBTN">
+            <div class="alertaPadre">
+                <div class="alertaHijos alertaHijo1"></div>
+                <div class="alertaHijos alertaHijo2">La proxima partida continuara en 5 seg...</div>
+                <div class="alertaHijos alertaHijo3"><button onclick="finalizarPartida()" class="btnFinJuego">Finalizar
+                        Juego</button></div>
+            </div>
+            <button class="recargarPag" onclick="jugarDeNuevo()">Recargar Pagina</button></a>
+        </div>
+    </main>
+
+    <script src="/assets/js/playScript.js"></script>
+    <script src="/assets/js/importName.js"></script>
+</body>
+
+</html>
