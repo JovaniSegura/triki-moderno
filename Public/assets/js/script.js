@@ -10,7 +10,7 @@ let rechazarColor = document.querySelector('.rechazarColor')
 let jugadorA = ""
 let jugadorB = ""
 
-input01.addEventListener('click', (e) => {
+    input01.addEventListener('click', (e) => {
     e.preventDefault()
     vn1.classList.remove('rechazarColor')
     let input01Value = validadorNombre1.value
@@ -39,20 +39,24 @@ input02.addEventListener('click', (e) => {
     }
 })
 
-const desactiva = (a, b) => {
-    if (a != b) {
-        if (a !== "" && b !== "") {
-            inicioDesactivado.classList.remove('inicioDesactivado')
+    const desactiva = (a, b) => {
+        if (a != b) {
+            if (a !== "" && b !== "") {
+                inicioDesactivado.classList.remove('inicioDesactivado')
+                vn1.textContent = 'Jugador Registrado'
+                vn2.textContent = 'Jugador Registrado'
+                vn1.classList.remove('rechazarColor')
+                vn2.classList.remove('rechazarColor')
+            }
+        }
+        else {
+            console.log('Los usuarios no deben ser identicos')
+            vn1.textContent = "Los nombres no deben ser identicos"
+            vn2.textContent = "Los nombres no deben ser identicos"
+            vn1.className = 'rechazarColor'
+            vn2.className = 'rechazarColor'
         }
     }
-    else {
-        console.log('Los usuarios no deben ser identicos')
-        vn1.textContent = "Los nombres no deben ser identicos"
-        vn2.textContent = "Los nombres no deben ser identicos"
-        vn1.className = 'rechazarColor'
-        vn2.className = 'rechazarColor'
-    }
-}
 
 // Eliminar valores de partidas ganadas del Sessión Storage
 sessionStorage.setItem('JugApGan', 0)
